@@ -1,16 +1,23 @@
+<!-- reviews-index.handlebars -->
+
 <h1>Reviews</h1>
+
+<a href="/reviews/new">Write a review</a>
+
 <div class="row">
-  {{#each reviews}}
-    <div class="col-sm-3">
-      <a href="/reviews/{{this._id}}">
-        <h5>{{this.title}}</h5>
-        <small>{{this.movieTitle}}</small>
-        <p>{{this.description}}</p>
-      </a>
-      <a href="/reviews/{{this._id}}/edit">Edit</a>
-      <form method="POST" action="/reviews/{{this._id}}?_method='DELETE'">
-        <button type="submit">Delete</button>
-      </form>
-    </div>
-  {{/each}}
+    {{#each reviews}}
+        <div class="col-sm-3">
+            <a href="/reviews/{{this._id}}">
+                <h5>{{this.title}}</h5>
+                <small>{{this.movieTitle}}</small>
+                <p>{{this.description}}</p>
+            </a>
+
+            <a href="/reviews/{{this._id}}/edit">Edit</a>
+
+            <form method="POST" action="/reviews/{{this._id}}?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    {{/each}}
 </div>

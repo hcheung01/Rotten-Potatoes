@@ -1,8 +1,10 @@
+<!-- reviews-edit.handlebars -->
+
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <legend>Edit Review</legend>
-    <form method="POST" action="/reviews?_method=PUT">
-      {{> partials/reviews-form }}
-    </form>
-  </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <legend>Edit Review</legend>
+        <form method="POST" action="/reviews/{{review._id}}?_method=PUT">
+            {{> reviews-form }}
+        </form>
+    </div>
 </div>
