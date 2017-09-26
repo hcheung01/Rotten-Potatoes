@@ -1,20 +1,37 @@
+<!-- reviews-form.handlebars -->
+
 <!-- TITLE -->
 <div class="form-group">
-  <label for="title">Title</label>
-  <input class="form-control" type="text" name="title" value="{{review.title}}"/>
+    <label for="title">Title</label>
+    <input class="form-control" type="text" name="title" value="{{review.title}}" />
 </div>
 
 <!-- MOVIE TITLE -->
 <div class="form-group">
-  <label for="movieTitle">Movie Title</label>
-  <input class="form-control" type="text" name="movieTitle" value="{{review.movieTitle}}" />
+    <label for="movieTitle">Movie Title</label>
+    <input class="form-control" type="text" name="movieTitle" value="{{review.movieTitle}}" />
+</div>
+
+<!-- RATING -->
+<div class="form-group">
+    <label for="rating">Rating</label>
+    <select name="rating" value={{review.rating}}>
+        <option value={{review.rating}} selected disabled hidden>{{review.rating}}</option>
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
 </div>
 
 <!-- DESCRIPTION -->
 <div class="form-group">
-  <label for="description">Description</label>
-  <textarea class="form-control" name="description" rows="10" />{{review.description}}</textarea>
+    <label for="description">Description</label>
+    <textarea class="form-control" name="description" rows="10" />{{review.description}}</textarea>
 </div>
+
 <!-- BUTTON -->
 <button type="submit" class="btn btn-primary">Save Review</button>
 <a href="/">Cancel</a>
